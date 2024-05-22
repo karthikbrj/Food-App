@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Header from "../../components/Navbar/Header/Header.jsx";
 import ExploreMenu from "../../components/ExploreMenu/ExploreMenu.jsx";
 const Home = () => {
+  const [category,setCategory] = useState("All");
+
   return (
     <div>
       <Header />
-      <ExploreMenu />
+      <ExploreMenu category={category} setCategory={setCategory} />
     </div>
   );
 };
